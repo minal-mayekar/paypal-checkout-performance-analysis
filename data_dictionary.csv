@@ -1,0 +1,20 @@
+field,definition,type,notes
+session_id,Unique synthetic checkout session identifier,Text,Unique per row
+session_date,Simulated session date,YYYY-MM-DD,Dates span 2026-08-01 to 2026-09-30
+device_type,Device used during session,Category,"Mobile, Desktop, Tablet"
+merchant_category,Illustrative merchant vertical,Category,"Fashion, Electronics, Home, Travel, Digital Goods"
+customer_type,Illustrative customer cohort,Category,"New, Returning"
+checkout_version,Checkout experience cohort,Category,"Standard, Redesigned"
+auth_ready,Whether simulated session is authentication-ready,0/1,"Synthetic flag, not actual PayPal user data"
+bnpl_eligible,Whether simulated session is eligible for BNPL,0/1,Synthetic eligibility flag
+bnpl_exposed,Whether BNPL option was exposed in simulated session,0/1,Synthetic exposure flag
+product_view,Product view stage reached,0/1,All rows represent product-view sessions
+cart_created,Cart stage reached,0/1,Sequential funnel indicator
+checkout_started,Checkout stage reached,0/1,Sequential funnel indicator
+payment_method_selected,Payment method selected,0/1,Sequential funnel indicator
+payment_attempted,Payment attempt made,0/1,Sequential funnel indicator
+payment_authorized,Payment attempt authorized,0/1,Synthetic authorization outcome
+purchase_completed,Purchase completed,0/1,"In this dataset, completion follows authorization"
+payment_method,Selected payment method,Category,Synthetic method selection
+failure_category,Last observed simulated outcome or failure category,Category,None indicates completed purchase
+order_value_usd,Simulated order value in USD,Decimal,Present for sessions that created a cart; not PayPal revenue
