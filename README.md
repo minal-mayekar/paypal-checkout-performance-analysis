@@ -1,29 +1,44 @@
-# PayPal Branded Checkout — Step 3 Data Pack
+# PayPal Checkout Performance Analysis
 
-## Purpose
-Demonstrate how a Business Analyst can structure checkout funnel data and investigate conversion, payment outcomes, and segment differences using SQL.
+## Project Overview
+A Business Analyst portfolio project exploring checkout funnel performance, payment authorization, and checkout completion using SQL, SQLite, Python, and Power BI.
 
-## Data provenance
-**This is synthetic demonstration data. It is not PayPal internal data, not a PayPal export, and not an estimate of PayPal's actual checkout performance.** All session-level values and relationships were generated for practice. Public PayPal statements inform the case-study question only.
+The business context is informed by publicly available information about PayPal's branded checkout strategy. The dashboard analysis uses a separately generated synthetic dataset.
 
-## Files
-- `synthetic_checkout_sessions.csv`: 5,000 synthetic session-level rows.
-- `checkout_analysis_queries.sql`: SQL checks, funnel metrics, segmentation queries, and trends.
-- `data_dictionary.csv`: field definitions and caveats.
+## Business Questions
+- Where do users drop off in the checkout funnel?
+- How does checkout completion vary by device?
+- How does the redesigned checkout experience compare with the standard experience?
+- How do payment authorization rates vary by payment method?
+- What opportunities could improve the checkout experience?
 
-## Suggested workflow
-1. Load the CSV into SQLite, PostgreSQL, SQL Server, or another database.
-2. Run the data quality query.
-3. Run the funnel query and validate denominators.
-4. Compare segments by device, checkout version, and authentication readiness.
-5. Treat observed synthetic differences as practice outputs only. Do not claim they describe PayPal.
-6. For real causal claims, use a properly designed randomized experiment or appropriate causal method with actual authorized data.
+## Tools & Technologies
+- SQL / SQLite
+- Python
+- Microsoft Power BI
+- CSV data analysis
+- Business requirements and KPI analysis
 
-## Metric definitions
-- Stage conversion rate = sessions reaching next stage / sessions reaching prior stage.
-- Checkout start-to-purchase rate = completed purchases / checkout starts.
-- Authorization rate = authorized attempts / payment attempts.
-- Simulated completed order value is not PayPal revenue, TPV, or net revenue.
+## Dashboard
+The Power BI dashboard explores:
+- Checkout funnel performance
+- Overall checkout completion rate
+- Payment authorization rate by method
+- Completion rate by checkout version
+- Completion rate by device
 
-## Key caveat
-The synthetic data-generating process includes deliberately modeled relationships to make analysis exercises possible. The data is not suitable for inferring real-world effect sizes or making actual PayPal business claims.
+## Repository Contents
+- `synthetic_checkout_sessions.csv` — synthetic checkout session dataset
+- `checkout_analysis_queries.sql` — primary SQL analysis queries
+- `practice_queries.sql` — supplementary SQL queries
+- `data_dictionary.csv` — definitions of dataset fields
+
+## Data Disclaimer
+**The dataset is synthetic and does not contain PayPal's actual transaction data. Dashboard metrics and findings are illustrative, not actual PayPal performance, and do not establish causation.** Public information is used only to frame the business problem.
+
+## Project Status
+- [x] Business problem and public evidence review
+- [x] Checkout and competitor analysis
+- [x] Synthetic dataset and SQL analysis
+- [x] Power BI dashboard
+- [ ] Final recommendations and documentation
