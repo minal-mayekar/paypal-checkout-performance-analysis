@@ -27,6 +27,10 @@ The Power BI dashboard explores:
 - Completion rate by checkout version
 - Completion rate by device
 
+![PayPal Checkout Performance Dashboard](paypal-checkout-dashboard.png)
+
+[Download the Power BI report](PayPal_Checkout_Analysis.pbix)
+
 ## Repository Contents
 - `synthetic_checkout_sessions.csv` — synthetic checkout session dataset
 - `checkout_analysis_queries.sql` — primary SQL analysis queries
